@@ -17,7 +17,8 @@ const headers = [
   },
   {
     header : "test3",
-    accessor : "test3"
+    accessor : "test3",
+    color : "green"
   }
 ];
 
@@ -38,7 +39,8 @@ const body = [
 ]
 
 storiesOf('Table', module)
-  .add('default', () => <Table headers={headers} data={body}/>);
+  .add('default', () => <Table headers={headers} data={body}/>)
+  .add('left direction', () => <Table headers={headers} data={body} direction={"left"}/>);
 
 // storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
